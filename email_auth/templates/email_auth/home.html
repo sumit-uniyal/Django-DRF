@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container mt-5">
+  <div class="card shadow p-3 mb-5 bg-body rounded">
+      <div class="card-body">
+          <form class="row g-3" method="post">
+              {% csrf_token %}
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Message</label>
+                <textarea class="form-control" placeholder="Enter the message" id="message" name="message" rows="8"></textarea>
+              </div>
+              <div class="d-grid ">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+{% endblock  %}
+
+{% block script %}
+{% endblock  %}
