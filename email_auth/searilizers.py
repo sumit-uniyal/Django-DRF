@@ -8,11 +8,11 @@ class Color_searilizer(serializers.ModelSerializer):
 
 
 class Mail_searilizer(serializers.ModelSerializer):
-    color = Color_searilizer()
-    country = serializers.SerializerMethodField()
+    # color = Color_searilizer()
+    # country = serializers.SerializerMethodField()
 
-    def get_country(self, obj):
-        return {'data': 'test'}
+    # def get_country(self, obj):
+    #     return {'data': 'test'}
     class Meta:
         model = Mail
         fields = '__all__'
