@@ -5,6 +5,7 @@ from .utils import *
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .searilizers import *
+from rest_framework import viewsets
 
 # Create your views here.
 def home(request):
@@ -102,3 +103,7 @@ def login(request):
             data = serializers.data
             return Response ({'message': 'Success'})
         return Response (serializers.errors)
+    
+class sumit(viewsets.ModelViewSet):
+    serializer_class = Mail_searilizer
+    queryset = Mail.objects.all()
